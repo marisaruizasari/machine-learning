@@ -61,7 +61,9 @@ Results on the test data:
 Overall ROC plots for all models on test and training data:
 
 Training:
+
 ![training data](roc_train.png)
 
 Test:
+
 ![test data](roc_test.png)
