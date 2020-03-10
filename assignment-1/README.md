@@ -5,7 +5,7 @@
 
 ### 1. General approach and thoughts
 
-My approach for the classification assignment on toxic Wikipedia comments is to identify a high recall model (low rate of false negatives, high rate of false positives). Given that the idea for the toxic comment classification task is to flag and and remove toxic comments, we want a model that has high rate of correctly identified positive classifications, and a low rate of false negatives (toxic comments that aren't flagged as toxic). However, we also want to reduce the amount of false positives so that non-toxic comments aren't over censored. 
+My approach for the classification assignment on toxic Wikipedia comments is to identify a high recall model (low rate of false negatives). Given that the idea for the toxic comment classification task is to flag and and remove toxic comments, we want a model that has high rate of correctly identified positive classifications, and a low rate of false negatives (toxic comments that aren't flagged as toxic). However, we also want to reduce the amount of false positives so that non-toxic comments aren't over censored. 
 
 The overall challenge that I'm trying to think through is that the models are already quite overfit to the dataset – using the source code I'm getting over 99% accuracy and very high precision and recall scores for most of the models. However, when applied to my test data, these high scores do not translate, meaning that our models are likely overfit. I tried making a lot of adjustments to to the bag of words feature extraction, as well as adding additional features using regular expressions and new symbol counts for exclammation marks and question marks, but was having trouble getting the accuracy, precision and recall to improve on the test data. 
 
