@@ -33,7 +33,7 @@ Here are a few of my silhouette plots for clusters ranging from 10-70. I also we
 
 ### Final clusters
 
-In the end I chose 40 as my number of clusters, but as I mentioned above I would still like to play around with this a bit. I noticed that there are a lot of ice creams and nut butters! Those tended to cluster well, while certain items like fruit bowls and salsa/onion mixes tended to get put together which didn't really make much sense to me. More to explore!!
+In the end I chose 40 as my number of clusters, but as I mentioned above I would still like to play around with this in the future because I'm getting items that don't seem to go together. I noticed that there are a lot of ice creams and nut butters! Those tended to cluster well, while certain items like fruit bowls and salsa/onion mixes tended to get put together which didn't really make much sense to me. More to explore!!
 
 I printed all of the descriptions for each cluster:
 ``` python
