@@ -55,7 +55,7 @@ for cluster in range(0,cluster_count):
 
 The following printout shows all of the contents of my clusters:
 
-```python
+```
 *****************************************************************
 CLUSTER: 0
 COUNT: 133
