@@ -1,6 +1,10 @@
 #  Assignment 1: Classification, natural language
 ### Machine Learning, PSAM 5020, Spring 2020 
 
+## Final submission
+
+In the end, after a lot of additional tinkering with my features I kept my original feature extraction and ridge regression model. I wasn't able to get the performance to improve since it was already pretty high in terms of the true positive rate. I would have liked to see the false positive rate go down, but overall I'm happy with the model.
+
 ## Iteration 1: Due Monday, March 9th
 
 ### 1. General approach and thoughts
