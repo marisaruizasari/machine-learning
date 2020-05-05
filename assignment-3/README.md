@@ -1,5 +1,387 @@
 ## Assignment 3: Option 3 - Food Recall Clustering
 
+## Final submission
+-------------------
+Changes: In the end I chose 87 clusters instead of my original 40, because the clusters had more consistent groupings of items. There were still some challenges with the groupings because of the inconsistencies across the product descriptions (a lot of them had extraneous portions of text and codes that I think are throwing off the clusters). The biggest challenge was that some items were clustered by brand or distribution company, while others were clusted by type of food item. Ideally I would have liked to have seen them clustered by food type rather than brand, but it would have been difficult to remove the brand info since the descriptions were not structured in a consistent or easily parseable way.
+
+Here are a couple of good cluster examples: 
+```
+*****************************************************************
+CLUSTER: 36
+COUNT: 81
+DESCRIPTIONS: 
+
+Blue Bell Ice Cream Dutch Chocolate Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Blueberry Cheesecake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Homemade in the Shade Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Marbled Cream Cheese Brownie Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Cookies 'n Cream Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Banana Pudding Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Natural Vanilla Bean Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Southern Hospitality Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Lemon Bliss Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream French Vanilla Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream I Heart Chocolate Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Rocky Mountain Road Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Ultimate Neopolitan Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Italian Cream Cake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Chocolate Covered Cherries Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Peppermint Bark Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Christmas Cookies Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Pecan Pralines 'n Cream Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Tin Roof Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Century Sundae Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream White Chocolate Almond Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Strawberry Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Southern Peach Cobbler Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Caramel Turtle Cheesecake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Rockslide Brownie Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Magic Cookie Bar Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Kentucky Delight Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Coffee Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Creole Cream Cheese Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Sea Salt Caramel Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Buttered Pecan Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Mardi Gras King Cake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Rum Raisin Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Butter Crunch Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Chocolate Peanut Butter Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Milk Cookies 'n Cream Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Mocha Almond Fudge Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Milk Chocolate Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Spiced Pumpkin Pecan Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Milk Chocolate Chip Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Fudge Divinity Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Pistachio Almond Natural and Artificial Flavor Added Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Triple Chocolate Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Peppermint Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Dos Amigos Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Key Lime Pie Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Mango Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream The Great Divide Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Hot Fudge Brownie Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Black Cherry Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream The Original Homemade Vanilla Flavored Natural and Artificial Flavor Added Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Red Velvet Cake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Black Walnut Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Orange Swirl  Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Banana Nut Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Coconut Fudge Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Happy Tracks Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Chocolate Decadence Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Banana Split Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Krazy Kookie Dough Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Chocolate Chip Cookie Dough Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Strawberry Cheesecake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Milk & Cookies Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Gingerbread House Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Nutty Chocolate Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Malt Shoppe Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Mocha Madness Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Mexican Praline Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Strawberries & Homemade Vanilla Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Caramel Sundae Crunch Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Rocky Road Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Peaches & Homemade Vanilla Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Tropical Paradise Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Southern Blackberry Cobbler Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Chocolate Chip Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Pineapples & Homemade Vanilla Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Moo-llenium Crunch Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Cherry Vanilla Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Lemon Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Birthday Cake Still a 1/2 Gal (2 QTS)
+---
+Blue Bell Ice Cream Red, White & Blue Bell Still a 1/2 Gal (2 QTS)
+
+*****************************************************************
+CLUSTER: 38
+COUNT: 11
+DESCRIPTIONS: 
+
+OSCAR'S SMOKE HOUSE TANGY HORSERADISH CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE BACON CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE TANGY HORSERADISH CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE GARLIC CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE GARLIC CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE PORT WINE CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE BACON & HORSERADISH CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE PLAIN CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE CHEDDAR SPREAD & BLUE CHEESE, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE JALAPENO PEPPER CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+---
+OSCAR'S SMOKE HOUSE "MORE THAN" CHEDDAR SPREAD, NET WT 7 OZS, keep refrigerated.  Distributed by: Oscar's Smoke House Warrensburg, NY 12885.
+
+```
+
+And here is an example of a cluster that I think was getting thrown off by extra text and dates included in the product description:
+
+```
+*****************************************************************
+CLUSTER: 69
+COUNT: 84
+DESCRIPTIONS: 
+
+Garden-Fresh,Hawaiian Salad,	1/5 lb.,	0 11596 55058 9,	11/25/2013 - 12/9/2013;  Our Own,	Hawaiian Salad,	1/4 lb,	0 11596 45068 1,	11/26/2013 - 12/9/2013;    
+---
+Weis,	Tuna Salad,	9/8 oz.,	0 41497 05345 2,	0 00 41497 05345 2,	11/26/2013 - 12/9/2013;  
+---
+Garden-Fresh,	Red Potato & Herb Salad,	2/5 lb.,		0 11596 91014 7,	11/21/2013 - 12/10/2013;  
+---
+Weis, Amish Macaroni Salad, 12/16 oz., 0 41497 05844 0, 0 00 41497 05844 0, 	11/25/2013 - 11/28/2013;  Weis, Amish Macaroni Salad, 4/3 lb.	0 41497 05905 8, 0 00 41497 05905 8,	11/21/2013 - 12/3/2013;  Weis, Amish Macaroni Salad, 2/5 lb.	, 0 11596 52105 3, 11/21/2013 - 12/3/2013;  ;
+---
+Garden-Fresh,	Whole Grain Penne with Spinach, Tomato & Feta,	1/5 lb,.		0 11596 52063 6,	11/26/2013 - 12/6/2013;  
+---
+Farmer's Market,	Fresh Salsa Jalapeno Mild,	6/15 oz.,	0 11596 06142 9,	0 00 11596 06142 9,	12/14/2013 - 12/15/2013  ;
+---
+Farmer's Market,	Fresh Salsa Serrano Spicy, 6/15 oz.,	0 11596 06143 6,	0 00 11596 06143 6,	12/14/2013 - 12/15/2013;  
+---
+Garden-Fresh, Cranberry Walnut Red Cabbage Slaw,1/8.25 lb., 0 11596 83028 5, 11/18/2013 - 12/6/2013  
+---
+Garden-Fresh,	German Potato Salad,	2/5 lb.,		0 11596 91020 8,	11/21/2013 - 12/9/2013;  Garden-Fresh,	German Potato Salad,	12/16 oz,.	0 11596 14017 9,	0 11596 14017 9,	11/25/2013 - 12/5/2013;  Garden-Fresh,	German Potato Salad,	4/48 oz..,	0 11596 34319 8,	0 00 11596 44319 5,	11/21/2013 - 12/9/2013;  Grandpa's,	German Potato Salad,	2/5 lb.,		0 11596 91023 9,	12/5/2013 - 12/14/2013;  Grandpa's,	German Potato Salad,	12/16 oz.,	0 11596 14016 2,	0 00 11596 24016 9,	12/5/2013;  
+---
+Garden-Fresh	European Style Chocolate Mousse	1/5 lb.		0 11596 55085 5	11/16/2013 - 12/5/2013  
+---
+Garden-Fresh, 	Dixie Cole Slaw, 	2/5 lb. 		0 11596 93007 7, 	11/21/2013 - 12/7/2013  
+---
+Garden-Fresh,	Southwestern Pasta,	1/5 lb.,		0 11596 52046 9,	11/25/2013 - 12/6/2013  
+---
+Weis,	Potato & Egg Salad,	12/16 oz.,	0 41497 05841 9,	0 00 41497 05841 9,	11/25/2013 - 12/3/2013;  Weis,	Potato & Egg Salad,	4/3 lb.,	0 41497 05902 7,	0 00 41497 05902 7,	11/21/2013 - 11/28/2013;  Weis,	Potato & Egg Salad,	2/5 lb.,		0 11596 51101 6,	11/21/2013 - 12/3/2013;  Dairy Fresh,	Potato Salad with Egg ,	2/5 lb.,		0 70163 89085 5	12/5/2013  
+---
+Dairy Fresh, Asian Vegetable Orzo, 	1/5 lb., 0 70163 50242 0, 	11/26/2013 - 12/10/2013;  Finest Traditions, Asian Vegetable Orzo, 1/5 lb., 10 733147 10976 9	12/2/2013 - 12/9/2013;  Garden-Fresh, Asian Vegetable Orzo, 1/5 lb.,  0 11596 52073 5	11/28/2013 - 12/6/2013;  
+---
+Weis,	Original Potato Salad,	12/16 oz.,	0 41497 05838 9,	0 00 41497 05838 9,	11/25/2013- 11/28/2013;  Weis,	Original Potato Salad,	4/3 lb.,	0 41497 05900 3,	0 00 41497 05900 3,	11/21/2013;  Weis,	Original Potato Salad,	2/5 lb.,		0 11596 51102 3,	11/21/2013 - 12/2/2013;  
+---
+Garden-Fresh, Chopped Broccoli / Cauliflower Salad Base, 1/5 lb., 0 11596 55188 3, 11/27/2013 - 12/5/2013  
+---
+Finest Traditions, Baked Bread Pudding, 1/7 lb., 	10 733147 10099 5, 	11/21/2013 - 12/10/2013;  Garden-Fresh, Baked Bread Pudding, 6/12 oz., 0 11596 07034 6, 0 11596 07034 6, 	11/27/2013 - 12/7/2013;  
+---
+Grandpa's,	Baked Beans, 	2/5 lb., 0 11596 55180 7, 	11/26/2013  - 12/9/2013  
+---
+Finest Traditions,	Steakhouse Potato Salad,	1/8 lb.,		10 733147 10773 4,	11/11/2013 - 12/9/2013  Grandpa's,	Steakhouse Potato Salad,	12/16 oz.	,0 11596 14068 1,	0 11596 24068 8,	11/25/2013 - 12/10/2013  Grandpa's,	Steakhouse Potato Salad,	2/5 lb.,		0 11596 55604 8,	11/21/2013 - 12/6/2013  
+---
+Garden-Fresh, Broccoli Cheese Salad Base,  1/5 lb., 	0 11596 55136 4, 11/25/2013 - 12/5/2013  
+---
+Garden-Fresh, Creamy Seafood Salad, 2/5 lb., 	0 11596 55124 1, 0 00 11596 55124 1, 	11/21/2013 - 12/10/2013  
+---
+Garden-Fresh,	Parmesan Peppercorn Pasta Salad Base,	1/5 lb.,,		0 11596 52086 5,	11/20/2013 - 12/1/2013;  
+---
+Garden-Fresh, Cookies & Cr¿me Mousse, 1/5 lb., 0 11596 55062 6, 	0 00 11596 05062 1, 	11/25/2013 - 12/9/2013  
+---
+Garden-Fresh,	Reduced Fat Cole Slaw,	1/5 lb.,		0 11596 53202 8,	12/6/2013 - 12/15/2013;  Garden-Fresh,	Reduced Fat Cole Slaw,	4/5 lb.,		0 11596 53500 5,	12/6/2013 - 12/14/2013;  
+---
+Finest Traditions,	Pumpkin Mousse,	1/5 lb.,		0 00 11596 55053 4,	11/15/2013 - 12/4/2013  Garden-Fresh,	Pumpkin Mousse,	1/5 lb.,		0 11596 55053 4,	11/16/2013 -12/4/2013  
+---
+Grandpa's,	Fresh Salsa, 	1/5 lb.,		0 11596 55912 4,	12/1/2013 - 12/12/2013;  Grandpa's,	Fresh Salsa, 	4/5 lb.,		0 11596 55913 1,	12/1/2013 - 12/12/2013;  Our Own,	Fresh Salsa	, 1/5 lb.,		 0 11596 59021 9 ,	11/22/213 - 12/9/2013  ;
+---
+Garden-Fresh, Amish Country Cole Slaw,  2/5 lb.	, 0 11596 53010 9	11/21/2013 - 12/6/2013  
+---
+Garden-Fresh, Farm Stand Pasta Salad, 1/5 lb.,	0 11 11596 52204 9, 	11/21/2103 - 12/6/2013  
+---
+Garden-Fresh,  Amish Country Baked Beans,  2/5 lb.,  0 11596 55186 9	11/21/2013 - 12/9/2013  
+---
+Garden-Fresh, Deluxe BLT Pasta, 	1/5 lb., 0 11596 52039 1, 	11/26/2013 - 12/7/2013  
+---
+Garden-Fresh,	Pumpkin Bread Pudding,	1/7 lb.,		0 11596 75036 1,	11/21/2013 - 12/10/2013  Garden-Fresh,	Pumpkin Bread Pudding,	6/12 oz.,	0 11596 07036 0,	0 11596 07036 0,	11/27/2013 - 12/7/2013  
+---
+Dairy Fresh,	Pasta & Tomato Salad,	1/5 lb,.		0 70163 41000 8,	11/26/2013 - 12/3/2013;  
+---
+Spoon River	Buttermilk Ranch Dip	6/12 oz.	0 11596 05684 5	0 00 11596 05684 5	12/16/2013 - 12/31/2013  Spoon River, Buttermilk Ranch Dip, 1/5 lb., 0 11596 55685 7, 	12/16/2013 - 12/31/2013  
+---
+Weis,	Old Fashioned Cole Slaw,	6/16 oz.,	0 41497 05849 5,	0 00 41497 05849 5,	11/21/2013 - 12/3/2013  Weis,	Old Fashioned Cole Slaw,	2/5 lb.,		0 11596 53100 7,	11/21/2013 - 12/2/2013  
+---
+Weis,	Spiral Pasta Salad,	1/5 lb.,		0 11596 52107 7,	11/21/2013 - 12/3/2013  
+---
+Garden-Fresh, Beet & Onion Salad, 	1/5 lb., 0 11596 52018 2 ,	11/21/2013 - 12/5/2013  
+---
+Dairy Fresh,	Mustard Potato Salad,	2/5 lb.,		 0 70163 89090 9,	12/3/2013 - 12/10/2013;  Garden-Fresh,	Mustard Potato Salad,	2/5 lb.,		0 11596 51013 2,	11/26/2013 - 12/7/2013;  Garden-Fresh,	Mustard Potato Salad,	12/16 oz.,	0 11596 14010 0,	0 11596 14010 0,	11/21/2013- 12/9/2013;  Garden-Fresh,	Mustard Potato Salad,	8/32 oz.,	0 11596 24215 6,	0 11596 24215 6	11/25/2013 - 12/7/2013;  Garden-Fresh,	Mustard Potato Salad,	6/48 oz.,	0 11596 34313 6,	0 11596 34313 6	11/21/2013 - 12/10/2013;  Rogge's,	Mustard Potato Salad,	2/5 lb.,		0 11596 51053 8,	11/17/2013 - 12/4/2013;  Spartan,	Mustard Potato Salad,6/16 oz.,	0 11213 90319 4,	0 00 11213 90319 4,	11/26/2013 - 12/2/2013;  /2013 - 12/9/2013;  
+---
+Garden-Fresh,	Tuna Twist Salad,	1/5 lb.,		0 11596 55134 0,	11/21/2013 - 12/7/2013;  
+---
+Garden-Fresh, Bread Pudding, 1/7 lb., 0 11596 75034 7, 11/21/2013 - 12/10/2013  
+---
+Marsh,	Grandpa's Cole Slaw,	2/5 lb.,		0 11596 93021 3,	11/17/2013 - 12/1/2013  
+---
+Spoon River,	Western Veggie Dip,	1/5 lb.,		0 11596 55679 6,	12/16/2013 - 12/30/2013;  
+---
+Finest Traditions,	Taco Dip,	6/8 oz.,	7 33147 10556 6,	10 733147 10557 0,	11/27/2013 - 12/9/2013  Grandpa's,	Taco Dip,	1/5 lb.,		0 11596 55903 2,	12/16/2013 - 12/31/2013  Maggie's,	Taco Dip,	6/12 oz.,	0 11596 06201 3,	0 00 11596 06201 3,	12/20/2013 - 12/30/2013  Roundy's,	Taco Dip,	6/12 oz.,	0 11150 52604 3,	0 00 11150 52604 3,	12/16/2013 - 12/24/2013  
+---
+Dairy Fresh	Macaroni Salad,	2/5 lb.,		0 70163 56415 2,	12/5/2013  Family Style	Macaroni Salad,	2/5 lb.,	0 11596 52060 5,	0 00 11596 52060 5,	11/22/2013 - 12/7/2013  Finest Traditions,	Macaroni Salad,	1/8 lb.,		10 733147 10286 9,	11/18/2013 - 12/4/2013,  Finest Traditions,	Macaroni Salad,	6/16 oz.,	7 33147 00018 2	10 733147 10157 2,	11/25/2013 - 11/25/2013  Garden-Fresh,	Macaroni Salad,	2/5 lb.,		0 11596 52005 6,	11/21/2013 - 12/7/2013  Garden-Fresh,	Macaroni Salad,	12/16 oz.,	0 11596 14018 6,	0 11596 14018 6,	11/25/2013 - 12/5/2013  Garden-Fresh,	Macaroni Salad,	8/32 oz.,	0 11596 24210 1,	0 11596 24210 1,	11/22/2013 - 12/7/2013  Garden-Fresh	Macaroni Salad	6/48 oz.	0 11596 34305 1	0 11596 34305 1	11/22/2013 - 12/6/2013  Grandpa's,	Macaroni Salad,	12/16 oz.,	0 11596 14066 7,	0 11596 24066 4,	11/25/2013  Rogge's,	Macaroni Salad,	2/5 lb.,		0 11596 52019 3,	11/11/2013  Spartan,	Macaroni Salad,	6/16 oz.,	0 11213 90321 7,	0 00 11213 90321 7,	11/25/2013 - 12/2/2013  
+---
+Finest Traditions,  Apple Salad Base	1/2.5 lb., 	10 733147 11020 8	11/27/2013;      Garden-Fresh, Apple Salad Base, 1/2.5 lb., 	0 11596 25057 1	11/21/2013 - 12/9/2013  
+---
+Copperwood Kitchens,	Chopped Cole Slaw,	2/5 lb.,		8 11839 01020 3,	11/21/2013 - 12/4/2013;  Dairy Fresh, Chopped Cole Slaw,	2/5 lb.,		0 70163 57363 5,	12/1/2013;  Family Style	, Cole Slaw,	2/5 lb.,		0 11596 53060 4,	11/26/2013 - 12/5/2013;  Grandpa's,	Cole Slaw,	2/5 lb.,		0 11596 93021 3,	11/21/2013 - 12/7/2013;  Grandpa's,	Cole Slaw,	12/16 oz.,	 0 11596 14028 5,	0 11596 24028 2,	11/26/2013 - 12/6/2013;  Grandpa's,	Cole Slaw,	12/16 oz.,	 0 11596 14028 5,	0 11596 24028 2,	11/25/2013 - 12/3/2013;  Grandpa's,	Cole Slaw,	4/48 oz.,	0 11596 34325 9,	0 00 11596 44325 6,	11/21/2013 - 12/7/2013;  Grandpa's,	Cole Slaw,	18/3.5 oz.,	0 11596 08006 2,	0 00 11596 08006 2,	11/21/2013 - 12/5/2013;  
+---
+Grandpa's, 	Artichoke Spinach Dip, 	1/5 lb., 0 11596 55902 5, 	12/21/2013;  Roundy's, 	Artichoke Spinach Dip, 	6/12 oz. ,	0 11596 06170 2, 	0 00 11596 16170 9, 	12/17/2013 - 12/24/2013  
+---
+Grandpa's,	Krab Dip,	1/5 lb.,	0 11596 55909 4, /26/2013 - 12/5/2013  
+---
+Grandpa's,	Fresh Bruschetta,	1/5 lb.,0 11596 55911 7,	12/1/2013 - 12/16/2013  
+---
+Garden-Fresh,	Steakhouse Potato Salad Kit,	1/10.75 lb.	,	0 11596 51076 7,	11/21/2013 - 12/7/2013  
+---
+Weis,	Original Macaroni Salad,	6/16 oz.,	0 41497 05839 6,	0 00 41497 05839 6,	11/25/2013 - 12/3/2013;  Weis,	Original Macaroni Salad,	4/3 lb.,	0 41497 05904 1,	0 00 41497 05904 1,	11/21/2013 - 11/28/2013;  Weis,	Original Macaroni Salad,	2/5 lb.,		0 11596 52106 0,	11/21/2013 - 12/3/2013;  
+---
+Garden-Fresh, Baked Egg Custard, 6/12 oz., 0 11596 07032 2, 0 11596 07032 2, 	11/25/2013 - 12/7/2013  
+---
+Marsh, Amish Potato Salad, 2/5 lb.,  	0 11596 51009 5, 11/21/2013 - 11/30/2013;  Weis, Amish Potato Salad, 12/16 oz, 0 41497 05845 7, 0 0041497 05845 7, 11/21/2013 - 12/3/2013;  Weis,Amish Potato Salad, 4/3 lb.,0 41497 05901 0,  0 00 41497 05901 0, 11/21/2013 - 11/28/2013;  Weis, Amish Potato Salad, 2/5 lb., 0 11596 51103 0 , 11/21/2013 - 11/29/2013;  
+---
+Grandpa's, Black Bean Salsa, 1/5 lb.	, 0 11596 55917 9, 12/7/2013;  Roundy's, Black Bean Salsa,12/15 oz., 0 11596 06118 4, 0 11596 06118 4, 12/1/2013 - 12/9/2013  ;
+---
+Maggie's,	White Fruit Dip,	6/12 oz.,	0 11596 06200 6,	0 00 11596 06200 6,	11/20/2013 - 12/4/2013;  
+---
+Spoon River,	Seafood Salad Kit,	1/5.5 lb.,		0 11596 55106,	11/21/2013 - 12/10/2013;  
+---
+Dairy Fresh,	Venetian Bow Tie Pasta,	1/5 lb.,		0 11596 50042 3,	11/26/2013;  Garden-Fresh,	Venetian Bow Tie Pasta,	1/5 lb.,		0 11596 52027 8,	11/21/2013 - 12/10/2013;  
+---
+Grandpa's,	Fresh Mango Salsa,	1/5 lb., 0 11596 55916 2,	12/9/2013 - 12/12/2013  
+---
+Our Own,	Fettucine Pasta Salad,	1/5 lb., 0 11596 52150 3,	11/21/2013 - 12/6/2013  
+---
+Garden-Fresh,	Kidney Bean Salad,	2/5 lb.,		0 11596 52016 2,	11/21/2013 - 12/4/2013;  
+---
+Dairy Fresh,	Red Skin Potato & Herb,	1/5 lb.,		0 70163 53370 7,	12/3/2013 - 12/10/2013;    
+---
+Garden-Fresh,	Italian Pasta Salad,	1/8 lb.,		0 11596 92012 4,	11/21/2013 - 12/6/2013;  Old Tyme,	Italian Pasta Salad,	1/8 lb.,		0 94776 03412 3,	11/21/2013 - 12/6/2013;  
+---
+Family Style,	Potato Salad,	2/5 lb.,		0 11596 51061 3,	11/27/2013;  Grandpa's,	Potato Salad,	2/5 lb.,		0 11596 91026 0,	11/27/2013 - 12/10/2013;  Grandpa's,	Potato Salad,	12/16 oz.,	0 11596 14027 8,	0 11596 24027 5,	11/21/2013 - 12/10/2013;  Grandpa's,	Potato Salad,	12/16 oz.,	0 11596 14027 8,	0 11596 24027 5,	11/25/2013 - 12/9/2013;  Grandpa's,	Potato Salad,	4/48 oz.,.	0 11596 34326 6,	0 00 11596 44326 3,	11/21/2013 - 12/10/2013;  Grandpa's	Potato Salad,	18/3.5 oz.,	0 11596 08005 5,	0 00 11596 08005 5,	11/21/2013 - 12/9/2013;  Spoon River,	Potato Salad,	2/5 lb.,		0 11596 51032 3,	11/28/2013 - 12/5/2013;  
+---
+Our Own, 	Chili Con Queso Dip, 	1/5 lb., 0 11596 55189 0 ,	11/21/2013 - 12/9/2013  
+---
+Weis, Baked Lima Beans, 1/5 lb., 	0 11596 52111 4, 	11/21/2013 - 12/3/2013  
+---
+Garden-Fresh, Layered Seafood Dip Base,,1/4 lb.,0 11596 55153 1, 11/21/2013 - 11/29/2013  
+---
+Our Own,	Greek Village Salad,	1/5 lb.,		0 11596 52151 0,	11/30/2013 - 12/4/2013  
+---
+Garden-Fresh,	Spinach Pasta Salad Kit	1/5.25 lb.,		0 11596 62072 5,	11/21/2013 - 12/9/2013  
+---
+Weis,	Seafood Salad Supreme	,1/5 lb.,		0 11596 55218 7,	11/21/2013 - 11/29/2013;  
+---
+Spoon River,	Signature Macaroni Salad,	2/5 lb.,		0 11596 55690 1,	11/21/2013 - 12/4/2013  
+---
+Our Own, Cheesecake Delight,  1/8 lb., 0 11596 85066 5	11/21/2013 - 12/9/2013  
+---
+Weis, Creamy Cole Slaw, 4/3 lb., 	0 41497 05906 5, 0 00 41497 05906 5, 11/21/2013 - 11/28/2013;    Garden-Fresh, Creamy Cole Slaw,	4/8 lb.,0 11596 53005 5,	0 00 11596 53005 5,	11/26/2013 - 12/4/2013;  Weis, Creamy Cole Slaw, 6/16 oz.,	0 41497 05837 2, 0 00 41497 05837 2,	11/25/2013 - 12/3/2013;  Weis, Creamy Cole Slaw, 2/5 lb.,	0 11596 53101 4, 11/21/2013 - 12/3/2013;      Garden-Fresh, Creamy Shredded Cole Slaw,	2/5 lb., 	0 11596 93014 5,	11/21/2013 - 12/7/2013;  Garden-Fresh, Creamy Shredded Cole Slaw,	12/16 oz.,	0 11596 14022 3,	0 11596 14022 3,	11/21/213 - 12/6/2013;  Garden-Fresh, Creamy Shredded Cole Slaw	8/32 oz.,	0 11596 24203 3,	0 11596 24203 3,	11/25/2013 - 12/3/2013;  Garden-Fresh, Creamy Shredded Cole Slaw,	6/48 oz.,	0 11596 34309 9	0 11596 34309 9	11/27/2013 - 12/6/2013;  Spartan,	Creamy Shredded Cole Slaw,	6/16 oz.,	0 11213 90322 4,	0 00 11213 90322 4,	11/25/2013 - 12/2/2013;  Spartan,	Creamy Shredded Cole Slaw,	4/48 oz..,	0 11213 90327 9,	0 00 11213 90327 9,	11/26/2013;;      
+---
+Grandpa's	Garlic Herb Spread,	1/5 lb.,	0 11596 55907 0,	11/21/2013 - 11/29/2013  
+---
+Grandpa's, 	Cucumber Dill Dip, 	1/5 lb.,0 11596 55900 1, 12/23/2013- 12/28/2013  
+---
+Garden-Fresh,	Poppy Seed Cole Slaw,	1/8 lb.,		0 11596 83016 2,	11/21/2013 - 12/5/2013;  
+---
+Weis,	Red Potato Salad,	6/16 oz.,	0 41497 05848 8,	0 00 41497 05848 8,	11/25/2013 - 11/28/2013;  Weis,	Red Potato Salad,	2/5 lb.,		0 11596 51105 4,	11/21/2013 - 12/4/2013;  
+---
+Garden-Fresh, Baked Potato Salad Kit, 1/5.75 lb.	, 0 11596 61071 9, 	11/21/2013 - 12/6/2013;  Marsh, Baked Potato Salad Kit, 1/5.75 lb., 0 11596 51083 5, 	11/22/2013 - 12/6/2013  
+---
+Garden-Fresh, Health Salad, 	1/8 lb,.	0 11 11596 82114 2,	11/21/2013 - 12/5/2013;  
+---
+Garden-Fresh,	Seven Layer Salad Kit,	2/3.75 lb.,		0 11596 85161 7,	12/2/2013 - 12/14/2013;  
+---
+Garden-Fresh, Deviled Egg Salad,	1/5 lb., 0 11596 52122 0,	11/20/2013 - 12/5/2013;  Grandpa's,	Deviled Egg Salad,	6/16 oz.,	0 11596 14012 4, 0 00 11596 14012 4 ,	11/26/2013 - 12/9/2013;  ;
+---
+Garden-Fresh,	Vinegar & Oil Cole Slaw,	1/8 lb.,		 0 11596 83000 1,	11/21/2013 - 12/6/2013;  Our Own,	Vinegar & Oil Cole Slaw	,1/8 lb.,		0 11596 83002 5,	11/21/2013 - 12/6/2013;  
+---
+Weis,	Pepper Cabbage,	2/5 lb.,		0 11596 53102 1,	11/21/2013 - 11/28/2013;  
+---
+Grandpa's,	Roasted Corn & Black Bean Salsa,	1/5 lb.,		0 11596 55915 5,	11/29/2013 - 12/2/2013;  
+---
+Garden-Fresh, Calico Beans, 4/5 lb.	, 0 11596 52500 6, 11/22/2013 - 12/2/2013;  Garden-Fresh, Calico Beans, 1/5 lb.	, 0 11596 52596 9, 11/11/2013 - 12/2/2013;  
+---
+Roundy's,	Salsa,	12/15 oz.,	0 11596 06117 7,	0 11596 06117 7,	12/1/2013 - 12/9/2013; 
+```
+
+## First explorations
+-------------------
+
 ### tfidf vectorizer
 
 I initially used the count vectorizer in the starter code but found that no matter how many clusters I had, I was still finding odd things grouped together (and that a lot of the descriptions had very long segments of repeating dates). I decided to use the tifidf to see if that would help reduce the influence of repeating words or ngrams
